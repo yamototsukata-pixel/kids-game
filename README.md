@@ -15,6 +15,7 @@
 
 ## 動かし方
 サーバーやインストールは不要。`index.html` をブラウザで開けば動く。
+1ファイルだけで渡したい場合は、`dist/mojimoji.html` を使う（このファイルだけで動く）。
 スマホ・タブレットで使う場合は、GitHub Pages などで公開して、そのURLを開く。
 
 - 推奨端末：スマートフォン・タブレット（指で書く）
@@ -28,6 +29,8 @@
 | `js/app.js` | アプリ本体（書き順アニメーション・なぞりの判定・読み上げ） |
 | `js/words.js` | 各文字を使ったことばの例（絵文字つき） |
 | `js/strokes.js` | 書き順データ（`tools/build-strokes.mjs` が自動生成） |
+| `dist/mojimoji.html` | 1ファイルだけで動く版（`node tools/build-single.mjs` が自動生成） |
+| `tools/build-single.mjs` | CSS と JS を埋めこんで `dist/mojimoji.html` を作るスクリプト |
 | `tools/build-strokes.mjs` | KanjiVG から書き順データを作り直すスクリプト（`node tools/build-strokes.mjs`） |
 | `docs/企画書.md` | 研究調査とアプリの企画 |
 
